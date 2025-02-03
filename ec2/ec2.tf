@@ -1,9 +1,12 @@
 resource "aws_instance" "terraform" {
-
-  ami_id                 = var.ami_id
-  vpc_security_group_ids = var.sg_id
+  ami                    = var.ami_id
+  vpc_security_group_ids = [aws_security_group.allow-terraform.id]
+  #vpc_security_group_ids = output.security
   instance_type          = var.instance_type
   tags = {
     name = "terraform-practice"
   }
+}
+output "security" {
+ value = aws_security_group.allow-terraform.id
 }

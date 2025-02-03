@@ -1,5 +1,5 @@
 resource "aws_security_group" "allow-terraform" {
-  name        = "terraform-practice"
+  name        = "allow-terraform"
   description = "Allow Terraform inbound traffic and all outbound traffic"
 
   ingress {
