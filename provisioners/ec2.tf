@@ -9,6 +9,7 @@ resource "aws_instance" "this" {
 
   provisioner "local-exec" {
     command = "echo ${self.private_ip} > inventory"
+
   }
 
   connection {
