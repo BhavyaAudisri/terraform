@@ -17,10 +17,10 @@ variable "domain_name" {
 } */
 
 variable "common_tags" {
-    type = map
-    default = {
-        Project = "expense"
-        Environment = "dev"
-    }
+  type = map(any)
+  default = {
+    Project     = "expense"
+    Environment = "dev"
+  }
 
 }
