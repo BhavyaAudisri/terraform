@@ -20,6 +20,6 @@ resource "aws_instance" "terraform1" {
     name = "terraform-practice"
   }
 }
-output "security" {
- value = aws_security_group.allow-terraform.id
-}
+# output "security" {
+#  value = aws_security_group.allow-terraform.id
+# }
